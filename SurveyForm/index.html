@@ -11,14 +11,14 @@
     <p id="description">Thank you for taking the time to help us improve the platform</p>
 
     <form id="survey-form">
-      <label for="name">Name</label><br />
+      <label id="name-label" for="name">Name</label><br />
       <input id="name" type="text" placeholder="Enter your name" required /><br />
 
-      <label for="email">Email</label><br />
+      <label id="email-label" for="email">Email</label><br />
       <input id="email" type="email" placeholder="Enter your email" required /><br />
 
-      <label for="age">Age (optional)</label><br />
-      <input id="age" type="number" placeholder="Age" /><br />
+      <label id="number-label" for="number">Age (optional)</label><br />
+      <input id="number" type="number" placeholder="Age" min="10" max="120" /><br />
 
       <label for="dropdown">Which option best describes your current role?</label>
       <select id="dropdown" name="current-role">
@@ -90,7 +90,7 @@
       <label for="comments">Any comments or suggestions?</label><br />
       <textarea id="comments" placeholder="Enter your comment here"></textarea><br />
 
-      <button type="submit">Submit</button>
+      <button id="submit" type="submit">Submit</button>
     </form>
   </main>
 </body>
