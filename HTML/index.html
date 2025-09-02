@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Photo App</title>
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to Cat Photo App</h1>
+      <h2>CatPhotoApp</h2>
+      <!-- TO DO: Add a link to the cat photos -->
+      <p>
+        Click here to view more
+        <a href="https://pixabay.com/images/search/cat/" target="_blank"
+          >Cat photos</a
+        >
+      </p>
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+        alt="A cute orange cat lying on its back."
+      />
+      <h3>Cat List</h3>
+        <div class="lists">
+        <p>Things cats <strong>love:</strong></p>
+        <ul>
+          <li>Catnip</li>
+          <li>Laser pointers</li>
+          <li>Boxes</li>
+          <li>Fish</li>
+        </ul>
+        <img src="catpointer.jpeg" alt="Cat playing with a laser pointer." />
+        <p>Things cats <strong>hate:</strong></p>
+        <ol>
+          <li>Getting wet</li>
+          <li>Vacuum cleaners</li>
+          <li>Dogs</li>
+          <li>Other cats</li>
+        </ol>
+      </div>
+      <img src="catsHissing.jpg" alt="Cats hissing at each other." />
+      <form action="/submit-cat-photo">
+
+        <label for="indoor"><input id="indoor" type="radio" name="indoor" checked /> Indoor
+        </label><br>
+        <label for="outdoor"><input id="outdoor" type="radio" name="outdoor" /> Outdoor
+        </label><br>
+
+        <label for="loving"><input id="loving" type="checkbox" name="personality" checked/> Loving
+        </label><br>
+        <label for="lazy"><input id="lazy" type="checkbox" name="personality" /> Lazy
+        </label><br>
+        <label for="energetic"><input id="energetic" type="checkbox" name="personality" /> Energetic
+        </label><br>
+
+        <input type="text" placeholder="cat photo URL" required /><br>
+        <button>Submit</button>
+      </form>
+    </main>
+    <footer>
+      <p><small>Built with love by the Cat Photo App team © 2025 Cat Photo App</small></p>
+    </footer>
+  </body>
+</html>
