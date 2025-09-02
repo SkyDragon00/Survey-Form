@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#description {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#survey-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: 600;
+  color: #6a11cb;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+label[for="definitely"], label[for="maybe"], label[for="not-sure"],
+label[for="front-end"], label[for="back-end"], label[for="data-vis"],
+label[for="challenges"], label[for="open-source"], label[for="gitter"],
+label[for="videos"], label[for="meetups"], label[for="wiki"],
+label[for="forum"], label[for="courses"] {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 0;
+  color: #333;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+#submit {
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+#submit:hover {
+  background: #5a0cb1;
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #survey-form {
+    padding: 20px;
+  }
+}
