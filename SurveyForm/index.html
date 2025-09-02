@@ -1,63 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
 <body>
-    <main>
-      <h1>freeCodeCamp Survey Form</h1>
-      <h2>Thank you for taking the time to help us improve the platform</h2>
+  <main>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
 
-      <label for="energetic"><id="energetic" name="personality" /> Name
-        </label><br>
-        <input type="text" placeholder="Enter your name" required /><br>
+    <form id="survey-form">
+      <label for="name">Name</label><br />
+      <input id="name" type="text" placeholder="Enter your name" required /><br />
 
-        <label for="energetic"><id="energetic" name="personality" /> Email
-        </label><br>
-        <input type="text" placeholder="Enter your name" required /><br>
+      <label for="email">Email</label><br />
+      <input id="email" type="email" placeholder="Enter your email" required /><br />
 
-        <label for="energetic"><id="energetic" name="personality" /> Age (optional)
-        </label><br>
-        <input type="text" placeholder="Enter your name" required /><br>
+      <label for="age">Age (optional)</label><br />
+      <input id="age" type="number" placeholder="Age" /><br />
 
-        <label for="current-role">Which option best describes your current role?</label>
-<select id="current-role" name="current-role">
-  <option value="">Select current role</option>
-  <option value="student">Student</option>
-  <option value="full-time-job">Full Time Job</option>
-  <option value="full-time-learner">Full Time Learner</option>
-  <option value="prefer-not-to-say">Prefer not to say</option>
-  <option value="other">Other</option>
-</select> <br>
+      <label for="dropdown">Which option best describes your current role?</label>
+      <select id="dropdown" name="current-role">
+        <option value="">Select current role</option>
+        <option value="student">Student</option>
+        <option value="full-time-job">Full Time Job</option>
+        <option value="full-time-learner">Full Time Learner</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+      <br />
 
-<label for="recommend">Would you recommend freeCodeCamp to a friend?</label><br>
-<label for="indoor"><input id="indoor" type="radio" checked /> Definitely</label><br>
-<label for="indoor"><input id="indoor" type="radio"/> Maybe</label><br>
-<label for="indoor"><input id="indoor" type="radio"/> Not sure</label><br>
+      <label>Would you recommend freeCodeCamp to a friend?</label><br />
+      <label for="definitely">
+        <input id="definitely" name="recommend" type="radio" value="definitely" checked /> Definitely
+      </label><br />
+      <label for="maybe">
+        <input id="maybe" name="recommend" type="radio" value="maybe" /> Maybe
+      </label><br />
+      <label for="not-sure">
+        <input id="not-sure" name="recommend" type="radio" value="not-sure" /> Not sure
+      </label><br />
 
-<label for="current-role">What is your favorite feature of freeCodeCamp?</label>
-<select id="current-role" name="current-role">
-  <option value="">Select current role</option>
-  <option value="student">Challenges</option>
-  <option value="full-time-job">Projects</option>
-  <option value="full-time-learner">Community</option>
-  <option value="prefer-not-to-say">Open Source</option>
-</select> <br>
+      <label for="favorite-feature">What is your favorite feature of freeCodeCamp?</label>
+      <select id="favorite-feature" name="favorite-feature">
+        <option value="">Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="open-source">Open Source</option>
+      </select>
+      <br />
 
+      <label>What would you like to see improved? (Check all that apply)</label><br />
+      <label for="front-end">
+        <input id="front-end" type="checkbox" name="improve" value="front-end" /> Front-end Projects
+      </label><br />
+      <label for="back-end">
+        <input id="back-end" type="checkbox" name="improve" value="back-end" /> Back-end Projects
+      </label><br />
+      <label for="data-vis">
+        <input id="data-vis" type="checkbox" name="improve" value="data-vis" /> Data Visualization
+      </label><br />
+      <label for="challenges">
+        <input id="challenges" type="checkbox" name="improve" value="challenges" /> Challenges
+      </label><br />
+      <label for="open-source">
+        <input id="open-source" type="checkbox" name="improve" value="open-source" /> Open Source Community
+      </label><br />
+      <label for="gitter">
+        <input id="gitter" type="checkbox" name="improve" value="gitter" /> Gitter help rooms
+      </label><br />
+      <label for="videos">
+        <input id="videos" type="checkbox" name="improve" value="videos" /> Videos
+      </label><br />
+      <label for="meetups">
+        <input id="meetups" type="checkbox" name="improve" value="meetups" /> City Meetups
+      </label><br />
+      <label for="wiki">
+        <input id="wiki" type="checkbox" name="improve" value="wiki" /> Wiki
+      </label><br />
+      <label for="forum">
+        <input id="forum" type="checkbox" name="improve" value="forum" /> Forum
+      </label><br />
+      <label for="courses">
+        <input id="courses" type="checkbox" name="improve" value="courses" /> Additional Courses
+      </label><br />
 
-<label for="current-role">What would you like to see improved? (Check all that apply)</label><br>
- <label for="loving"><input type="checkbox"/> Front-end Projects</label><br>
-  <label for="loving"><input type="checkbox"/> Back-end Projects</label><br>
-   <label for="loving"><input type="checkbox"/> Data Visualization</label><br>
-    <label for="loving"><input type="checkbox"/> Challanges</label><br>
-     <label for="loving"><input type="checkbox"/> Open Source Community</label><br>
-      <label for="loving"><input type="checkbox"/> Gitter help rooms</label><br>
-       <label for="loving"><input type="checkbox"/> Videos</label><br>
-        <label for="loving"><input type="checkbox"/> City Meetups</label><br>
-         <label for="loving"><input type="checkbox"/> Wiki</label><br>
-          <label for="loving"><input type="checkbox"/> Forum</label><br>
-           <label for="loving"><input type="checkbox"/>
-           Additional Courses</label><br>
+      <label for="comments">Any comments or suggestions?</label><br />
+      <textarea id="comments" placeholder="Enter your comment here"></textarea><br />
 
-<label for="energetic"><id="energetic" name="personality" /> Any comments or suggestions?
-        </label><br>
-        <input type="text" placeholder="Enter your comment here" required /><br>
-
-        <button>Submit</button>
-    <main/>
-<body/>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
