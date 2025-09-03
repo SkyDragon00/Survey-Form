@@ -62,6 +62,9 @@ main {
 
 .feature-content {
   flex: 1;
+  padding: 30px;
+  max-width: 60%;
+  font-size: large;
 }
 
 .feature-image {
@@ -146,6 +149,33 @@ h2 {
   background-color: #e2b607;
 }
 
+.email-signup {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.email-signup form {
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+}
+
+#email {
+  padding: 10px 15px;
+  width: 60%;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.email-signup .select-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
   #header {
@@ -154,7 +184,7 @@ h2 {
   }
   
   #nav-bar ul {
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0;
   }
 }
