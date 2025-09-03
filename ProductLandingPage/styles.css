@@ -1,14 +1,29 @@
-/* Header styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 80px;
+}
+
+/* Header and Navigation */
 #header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 20px;
+  background-color: rgb(240, 207, 21);
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(236, 196, 19);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  height: 80px;
 }
 
 .logo {
@@ -16,15 +31,9 @@
   align-items: center;
 }
 
-.logo img {
+#header-img {
   width: 60px;
   height: auto;
-}
-
-.logo span {
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 10px;
 }
 
 #nav-bar ul {
@@ -40,31 +49,48 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  padding: 10px;
+  transition: color 0.3s;
 }
 
-/* Add space for the fixed header */
-body {
-  margin-top: 70px;
+.nav-link:hover {
+  color: #e74c3c;
 }
 
+/* Main Content */
 main {
   max-width: 1200px;
-  margin: 100px auto 0;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
+#title {
+  font-size: 2.5rem;
+  margin: 30px 0 10px;
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Feature Sections */
 .feature-section {
   display: flex;
   align-items: center;
-  margin: 50px 0;
+  margin: 60px 0;
   gap: 30px;
 }
 
 .feature-content {
-  flex: 1;
-  padding: 30px;
-  max-width: 60%;
-  font-size: large;
+  flex: 1.5;
+}
+
+.feature-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
 .feature-image {
@@ -78,13 +104,28 @@ main {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
-  margin-top: 0;
-  color: #333;
+/* Video Section */
+#video-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+.video-container {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+#video {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+/* Products Section */
 #products {
-  margin: 70px 0;
+  margin: 60px 0;
 }
 
 .product-container {
@@ -97,7 +138,7 @@ h2 {
 .product-card {
   flex: 1;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -107,7 +148,7 @@ h2 {
 }
 
 .product-card h3 {
-  background-color: #ffffff;
+  background-color: #e0e0e0;
   margin: -20px -20px 15px;
   padding: 15px 0;
   width: calc(100% + 40px);
@@ -131,7 +172,7 @@ h2 {
 
 .product-card img {
   max-width: 100%;
-  height: 170px;
+  height: 150px;
   object-fit: contain;
   margin-bottom: 20px;
 }
@@ -149,42 +190,108 @@ h2 {
   background-color: #e2b607;
 }
 
+/* Email Signup */
 .email-signup {
   text-align: center;
   margin: 40px 0;
 }
 
 .email-signup form {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 500px;
-  width: 100%;
+  margin: 0 auto;
+  gap: 15px;
 }
 
 #email {
   padding: 10px 15px;
-  width: 60%;
+  width: 100%;
   font-size: 16px;
-  margin-right: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.email-signup .select-btn {
-  padding: 10px 20px;
+#submit {
+  padding: 12px 30px;
   font-size: 16px;
-  vertical-align: top;
+  width: 200px;
 }
 
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
 
-/* Responsive design */
+/* Media Queries */
+@media (max-width: 992px) {
+  .feature-section {
+    gap: 20px;
+  }
+  
+  .feature-content {
+    flex: 1;
+  }
+  
+  #video {
+    height: 350px;
+  }
+}
+
 @media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .feature-section:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  
+  .product-container {
+    flex-direction: column;
+  }
+  
+  .product-card {
+    margin-bottom: 20px;
+  }
+  
+  #video {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 120px;
+  }
+  
   #header {
     flex-direction: column;
+    height: auto;
     padding: 10px;
   }
   
   #nav-bar ul {
-    margin-top: 0px;
-    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  #nav-bar li {
+    margin: 0 10px;
+  }
+  
+  #title {
+    font-size: 2rem;
+  }
+  
+  #video {
+    height: 250px;
   }
 }
